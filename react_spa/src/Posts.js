@@ -7,7 +7,7 @@ class Posts extends Component {
   render() {
     return (
       <Row>
-        <TopPosts />
+        <TopPosts category="Featured" />
         <SideBar />
       </Row>
     );

@@ -1,18 +1,22 @@
 import React, { Component } from "react";
+import { Route, Link, HashRouter } from "react-router-dom";
 import { Container, Row, Col } from 'reactstrap';
 import DateParser from "./DateParser";
+import AuthorView from "./AuthorView";
 
 class TopPosts extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       posts: [],
+      category: this.props.category,
+      author: null,
     };
   }
 
   componentDidMount() {
 
-    fetch('https://public-api.wordpress.com/rest/v1.1/sites/153341830/posts/?number=2&order=desc')
+    fetch(`https://public-api.wordpress.com/rest/v1.1/sites/153341830/posts/?category=${this.state.category}`)
     .then(results => {
       return results.json();
     })
@@ -34,7 +38,7 @@ class TopPosts extends Component {
                   <img src={post.author.avatar_URL}/>
                 </Col>
                 <Col xs="6">
-                  <h4><a href="#">{post.author.first_name} {post.author.last_name}</a></h4>
+                  <h4><Link to={`/author/${post.author.nice_name}`}>{post.author.first_name} {post.author.last_name}</Link></h4>
                 </Col>
               </Row>
               <hr/>
@@ -42,6 +46,13 @@ class TopPosts extends Component {
             <div dangerouslySetInnerHTML = { {__html : post.content} }/>
             <hr/>
             <p>A post created <DateParser dateUTC={post.date} /></p>
+              <Container>
+                <HashRouter>
+                  <div>
+                    <Route path="/author/:authorName" component={AuthorView}/>
+                  </div>
+                </HashRouter>
+              </Container>
           </div>
         )}
       </Col>

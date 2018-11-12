@@ -4,16 +4,9 @@ class Stuff extends Component {
   render() {
     return (
       <div className="content">
-        <h2>STUFF</h2>
-        <p>Mauris sem velit, vehicula eget sodales vitae,
-        rhoncus eget sapien:</p>
-        <ol>
-          <li>Nulla pulvinar diam</li>
-          <li>Facilisis bibendum</li>
-          <li>Vestibulum vulputate</li>
-          <li>Eget erat</li>
-          <li>Id porttitor</li>
-        </ol>
+        <h2>About Our Site</h2>
+        <img src="https://attitude.co.uk/media/images/2015/06/rose.gif"
+          alt="Tatum Riley's iconic line in the movie Scream was the inspiriation for our site's name!" />
       </div>
     );
   }

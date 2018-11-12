@@ -1,5 +1,6 @@
 body {
-  background-image: url("pumpkin_splash.jpg");
+  /*background-image: url("pumpkin_splash.jpg");*/
+  background-color: black;
   background-size: cover;
   min-height: 100%;
 }
@@ -94,4 +95,24 @@ iframe {
   margin-top: 7%;
   margin-bottom: 0;
   padding-bottom: 0;
+}
+
+.reviewCard {
+  min-height: 100%;
+}
+
+.reviewImage {
+  max-height: 435px;
+}
+
+.reviewTile {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.carousel {
+  padding-bottom: 20px;
+}
+.carousel-item > img {
+  width: 100%;
 }
