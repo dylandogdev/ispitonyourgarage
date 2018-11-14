@@ -175,3 +175,8 @@ a:hover {
 .postDateStamp {
   text-align: right;
 }
+
+.contactContent {
+  min-height: 100%;
+  min-width: 100%;
+}

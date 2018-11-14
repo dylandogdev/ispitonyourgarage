@@ -1,0 +1,177 @@
+body {
+  /*background-image: url("pumpkin_splash.jpg");*/
+  background-color: black;
+  background-size: cover;
+  min-height: 100%;
+}
+html {
+  height: 100%;
+}
+h1, h2, h6, p, ul, li {
+  font-family: Georgia, serif;
+}
+h1, h3 {
+  color: rgba(255, 255, 255);
+}
+h5, h6 {
+  color: #FFFFFF;
+}
+a {
+  color: inherit;
+}
+.header {
+  min-width: 100%;
+}
+ul.header li {
+  display: inline;
+  list-style-type: none;
+  margin: 0;
+}
+ul.header {
+  background-color: #111;
+  padding: 0;
+}
+ul.header li a {
+  color: #FFF;
+  font-weight: bold;
+  text-decoration: none;
+  padding: 20px;
+  display: inline-block;
+}
+ul.header li a:hover {
+  color: orange;
+}
+ul.header li a:active {
+  color: orange;
+}
+.content {
+  /*background-image: linear-gradient(rgba(255, 255, 255, 0.5), rgba(153, 153, 153, 0.5));*/
+  background-color: #FFFFFF;
+  padding: 40px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.content h2 {
+  color: inherit;
+  padding: 0;
+  margin: 0;
+}
+.content li {
+  margin-bottom: 10px;
+}
+.content hr {
+  border-color: orange;
+}
+.content img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.active {
+  background-color: rgba(153, 153, 153, 0.2);
+}
+.post_author_block {
+  margin: auto;
+  text-align: center;
+}
+.post_author_block h4 {
+  margin-top: 5%;
+  color: #000000;
+}
+.post_author_block img {
+  display: inline-block;
+  border-radius: 50px;
+  height: 61px;
+}
+.post_heading_block h1 {
+  color: inherit;
+  text-align: center;
+}
+.sideBar {
+  min-height: 100%;
+  background-color: #000000;
+  margin-bottom: 10px;
+  border-radius: 12px;
+  padding: 40px;
+}
+.sideBar hr {
+  border-color: white;
+}
+.sideBar a, h4, h3, h2, h1 {
+  color: white;
+}
+.themeSwitcher {
+  color: white;
+}
+iframe {
+  overflow-x:hidden;
+  overflow-y:hidden;
+  width:100%;
+  min-height: 300px;
+  border:0px;
+  margin-top: 4%;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  padding-left: 8%;
+}
+
+.reviewCard {
+  min-height: 100%;
+}
+
+.reviewImage {
+  max-height: 435px;
+}
+
+.reviewTile {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.carousel {
+  padding-bottom: 20px;
+}
+.carousel-item > a img {
+
+  max-height: 600px;
+  width: 100%;
+}
+.podcastWidget {
+  text-align: center;
+}
+
+.externalLinks h4 {
+  text-align: center;
+}
+
+a:hover {
+  color: orange;
+  text-decoration: none;
+}
+
+.sideBar small {
+  color: #FFFFFF;
+}
+
+.sideBar img {
+  max-width: 100%;
+}
+
+.icons {
+  text-align: center;
+  font-size: 30px;
+}
+
+.featureTile .btn {
+  background-color: #000000 !important;
+}
+
+.card h5 {
+  color: #000000;
+}
+
+.postDateStamp {
+  text-align: right;
+}
