@@ -1,9 +1,7 @@
 import React, { Component } from "react";
-import { Container, Row, Col, Card, CardImg, CardBody, CardTitle, CardSubtitle, CardText, Button } from 'reactstrap';
+import { Container, Row, Col, Card, CardImg, CardBody, CardText, Button } from 'reactstrap';
 import { Route, NavLink, HashRouter } from "react-router-dom";
-import DateParser from "./DateParser";
 import Post from "./Post";
-
 class MiniFeatureTiles extends Component {
 
   constructor(props) {
@@ -34,10 +32,10 @@ class MiniFeatureTiles extends Component {
             <Card className="featureCard">
               <CardImg top width="100%" src={post.featured_image} alt="Card image cap" className="reviewImage"/>
               <CardBody>
-              <CardTitle dangerouslySetInnerHTML = { {__html : post.title} }></CardTitle>
-              <CardSubtitle>Subtitle</CardSubtitle>
               <CardText dangerouslySetInnerHTML = { {__html : post.excerpt} }></CardText>
+              <div class="text-center">
                 <Button><NavLink to={`/post/${post.ID}`}>Read More!</NavLink></Button>
+              </div>
               </CardBody>
             </Card>
             <Container>

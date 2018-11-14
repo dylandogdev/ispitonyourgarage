@@ -37,7 +37,7 @@ class PostById extends Component {
               <hr/>
               <Row className="post_author_block">
                 <Col xs={{size: 3, offset: 2}}>
-                  <img src={post.author.avatar_URL}/>
+                  <img src={post.author.avatar_URL} alt={post.author.nice_name} />
                 </Col>
                 <Col xs="6">
                   <h4><Link to={`/author/${post.author.nice_name}`}>{post.author.first_name} {post.author.last_name}</Link></h4>
@@ -47,7 +47,7 @@ class PostById extends Component {
             </div>
             <div dangerouslySetInnerHTML = { {__html : post.content} }/>
             <hr/>
-            <p>A post created <DateParser dateUTC={post.date} /></p>
+            <p className="postDateStamp">A post created <DateParser dateUTC={post.date} /></p>
           <div className="post_footer">
             <Button><NavLink to='/reviews'>Go Back</NavLink></Button>
           </div>

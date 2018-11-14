@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Container, Row, Col } from 'reactstrap';
+import { Row, Col } from "reactstrap";
 import DateParser from "./DateParser";
 
 class PostsByAuthor extends Component {
@@ -21,18 +21,23 @@ class PostsByAuthor extends Component {
   }
 
   render() {
-    const { posts } = this.state;
+
+    const posts = this.state.posts;
+
+    if (posts === null) {
+      return <div>Loading..</div>;
+    }
 
     return (
       <Col xs={{size: 8}}>
-        {posts.map(post =>
+        {this.state.posts.map(post =>
           <div className="content" key={post.ID}>
             <div className="post_heading_block">
               <h1>{post.title}</h1>
               <hr/>
               <Row className="post_author_block">
                 <Col xs={{size: 3, offset: 2}}>
-                  <img src={post.author.avatar_URL}/>
+                  <img src={post.author.avatar_URL} alt={post.author.nice_name}/>
                 </Col>
                 <Col xs="6">
                   <h4>{post.author.first_name} {post.author.last_name}</h4>
@@ -42,7 +47,7 @@ class PostsByAuthor extends Component {
             </div>
             <div dangerouslySetInnerHTML = { {__html : post.content} }/>
             <hr/>
-            <p>A post created <DateParser dateUTC={post.date} /></p>
+            <p className="postDateStamp">A post created <DateParser dateUTC={post.date} /></p>
           </div>
         )}
       </Col>

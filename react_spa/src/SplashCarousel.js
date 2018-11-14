@@ -1,27 +1,37 @@
 import React, { Component } from 'react';
 import {
+  Route,
+  Link,
+  HashRouter
+} from "react-router-dom";
+import {
+  Container,
   Carousel,
   CarouselItem,
   CarouselControl,
   CarouselIndicators,
   CarouselCaption
 } from 'reactstrap';
+import Post from "./Post";
 
 const items = [
   {
     src: 'https://s2-ssl.dmcdn.net/sjnXI/x1080-OfE.jpg',
-    altText: 'Slide 1',
-    caption: 'Slide 1'
+    altText: 'Tilda Swinton in Suspiria (2018)',
+    caption: 'Tilda Swinton casts a spell in the new remake of the art-horror classic Suspiria. Read our review!',
+    postId: 34
   },
   {
-    src: 'https://screamfestla.com/sites/default/files/blog/_2556958_orig.jpg',
-    altText: 'Slide 2',
-    caption: 'Slide 2'
+    src: 'https://www.news-24.it/wp-content/uploads/2018/10/Suspiria-Speciale-Giallo-allitaliana.jpg',
+    altText: 'Suzy Banyon played by Jessica Harper in Suspiria (1977)',
+    caption: 'Read our review of the 1977 classic Suspiria before you see the remake!',
+    postId: 55
   },
   {
-    src: 'https://dailydead.com/wp-content/uploads/2018/03/Faculty-Horror-1000.jpg',
-    altText: 'Slide 3',
-    caption: 'Slide 3'
+    src: 'https://musicart.xboxlive.com/6/cfb00cfa-0000-0000-0000-000000000009/504/image.jpg?w=1920&h=1080',
+    altText: 'Tilda Swinton and Tom Hiddleston in Only Lovers Left Alive',
+    caption: 'Spooky Action at a Distance: Tilda Swinton and Tom Hiddleston share an age-old romance in the spooky hangout movie Only Lovers Left Alive',
+    postId: 52
   }
 ];
 
@@ -71,8 +81,17 @@ class SplashCarousel extends Component {
           onExited={this.onExited}
           key={item.src}
         >
+        <Link to={`/post/${item.postId}`}>
           <img src={item.src} alt={item.altText} />
-          <CarouselCaption captionText={item.caption} captionHeader={item.caption} />
+          <CarouselCaption captionText={item.caption}  />
+        </Link>
+        <Container>
+          <HashRouter>
+            <div>
+              <Route path="/post/:postId" component={Post}/>
+            </div>
+          </HashRouter>
+        </Container>
         </CarouselItem>
       );
     });

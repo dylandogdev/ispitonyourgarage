@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Row } from "reactstrap";
-import TopPosts from "./TopPosts";
 import SideBar from "./SideBar";
 import PostsByAuthor from "./PostsByAuthor";
 
 class Posts extends Component {
+  // eslint-disable-next-line
   constructor(props) {
     super(props);
   }

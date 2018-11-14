@@ -1,14 +1,22 @@
 import React, { Component } from "react";
+import { Row, Col } from 'reactstrap';
+import SideBar from "./SideBar";
 
 class Contact extends Component {
   render() {
     return (
-      <div className="content">
-        <h2>GOT QUESTIONS?</h2>
-        <p>The easiest thing to do is post on
-        our <a href="http://forum.kirupa.com">forums</a>.
-        </p>
-      </div>
+      <Row>
+        <Col xs={{size:8}}>
+          <div className="contactContent">
+            <div>
+              <h6>
+                It's 2018. Just contact us on social media like a normal person.
+              </h6>
+            </div>
+          </div>
+        </Col>
+        <SideBar />
+      </Row>
     );
   }
 }

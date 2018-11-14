@@ -1,6 +1,5 @@
 import React, { Component } from "react";
-import { Container, Row, Col } from 'reactstrap';
-import ThemeSwitcher from "./ThemeSwitcher";
+import { Col } from 'reactstrap';
 import ExternalLinks from "./ExternalLinks";
 
 class SideBar extends Component {
@@ -9,12 +8,17 @@ class SideBar extends Component {
 
     return (
       <Col xs={{size: 4}} className="sideBar">
-        <h3>Text Sample</h3>
+        <img src="https://i.gifer.com/A2V.gif" alt="A friendly sppoky ghost!" />
         <hr/>
-        <ThemeSwitcher />
         <hr/>
         <ExternalLinks />
         <hr/>
+        <hr/>
+        <small>
+          This site © 2018 | dylandogdev.com
+          <br></br>
+          Like my work? <a href="https://www.dylandogdev.com">Hire me!</a>
+        </small>
       </Col>
     );
 
